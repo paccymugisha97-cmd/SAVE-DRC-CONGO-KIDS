@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saving CONGO (DRC)  Kids</title>
+  <title>Saving CONGO (DRC) Kids</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -23,7 +24,7 @@
 
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Hope for Every Child In Easten cong (DRC)</h1>
+      <h1>Hope for Every Child In Eastern Congo (DRC)</h1>
       <p>Join us in making a difference for children in CONGO(DRC).</p>
       <a href="#donate" class="btn">Donate Now</a>
     </div>
@@ -36,34 +37,39 @@
 
   <section id="about" class="section light">
     <h2>About Us</h2>
-    <p> The conflict in the Democratic Republic of Congo (DRC) began in the mid-1990s following regional instability after the 1994 genocide in Rwanda. Since then, repeated wars and ongoing armed violence—especially in eastern Congo—have deeply affected civilians. Millions of families have been displaced, and children have suffered the most, facing loss of education, healthcare, and basic safety.
-
-      Despite peace efforts, insecurity continues today, leaving many children vulnerable to poverty, hunger, and trauma. Saving Congo (DRC) Kids was created to bring hope where it is needed most—by supporting education, healthcare, and protection for children impacted by years of conflict. We believe every child deserves safety, dignity, and a chance for a better future.</p>
+    <p>The conflict in the Democratic Republic of Congo (DRC) began in the mid-1990s following regional instability after the 1994 genocide in Rwanda. Since then, repeated wars and ongoing armed violence—especially in eastern Congo—have deeply affected civilians. Millions of families have been displaced, and children have suffered the most, facing loss of education, healthcare, and basic safety.</p>
+    <p>Despite peace efforts, insecurity continues today, leaving many children vulnerable to poverty, hunger, and trauma. Saving Congo (DRC) Kids was created to bring hope where it is needed most—by supporting education, healthcare, and protection for children impacted by years of conflict. We believe every child deserves safety, dignity, and a chance for a better future.</p>
   </section>
 
   <section id="donate" class="section">
     <h2>Make a Donation</h2>
     <p>Your support helps provide essential resources like food, shelter, and education.</p>
-    <a href="#" class="btn donate" id="payBtn">Pay with Mastercard or Bank</a>
+    <!-- Replace the single donate link with two buttons for payment options -->
+    <button id="payMastercard" class="btn pay-option">Pay with Mastercard</button>
+    <button id="payBank" class="btn pay-option">Pay with Bank</button>
   </section>
 
-  <section id="contact" class="section light">
-    <h2>Contact Us</h2>
-    <p>Email us at <a href="mailto:info@paccymugisha97@gmail.com">info@paccymugisha97@gmail.com</a> or follow us on social media.</p>
-  </section>
+  <!-- Payment Modal (optional, can be hidden if not using modal) -->
+  <div id="paymentModal" class="payment-modal" style="display:none;">
+    <div class="payment-box">
+      <h3>Select Payment Method</h3>
+      <button id="payMastercardModal" class="pay-option">Pay with Mastercard</button>
+      <button id="payBankModal" class="pay-option">Pay with Bank</button>
+      <button class="close-btn" onclick="closePayment()">Cancel</button>
+    </div>
+  </div>
+
   <section id="contact" class="section light">
     <h2>Contact Us</h2>
     <p>Email us at <a href="mailto:info@paccymugisha97@gmail.com">info@paccymugisha97@gmail.com</a></p>
-    <p>Call or WhatsApp us: <a href="tel:+1 (615) 949-1678">+1 (615) 949-1678</a></p>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <p>Call or WhatsApp us: <a href="tel:+16159491678">+1 (615) 949-1678</a></p>
   </section>
-  
 
   <footer>
-    <p>&copy; 2025 Saving African Kids. All rights reserved.</p>
+    <p>&copy; 2025 Saving DRC CONGO Kids. All rights reserved.</p>
   </footer>
 
+  <!-- Include your updated JS -->
   <script src="script.js"></script>
 </body>
 </html>
