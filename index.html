@@ -4,72 +4,232 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AMANI FOUNDATION</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      background: #222;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+      url("images/hero.jpg") center/cover no-repeat;
+      color: white;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e63946;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Sections */
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .light {
+      background: #f4f4f4;
+    }
+
+    /* Gallery */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gallery-container img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">AMANI FOUNDATION</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#donate">Donate</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="menu-toggle" id="menuToggle">&#9776;</div>
-    </nav>
-  </header>
 
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Hope for Every Child In Eastern Congo (DRC)</h1>
-      <p>Join us in making a difference for children in CONGO(DRC).</p>
-      <a href="#donate" class="btn">Donate Now</a>
-    </div>
-  </section>
+<header>
+  <nav class="navbar">
+    <div class="logo">AMANI FOUNDATION</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#donate">Donate</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section id="mission" class="section">
-    <h2>Our Mission</h2>
-    <p>We provide healthcare, education, and nourishment to children across Africa through community-led initiatives and global partnerships.</p>
-  </section>
-
-  <section id="about" class="section light">
-    <h2>About Us</h2>
-    <p>The conflict in the Democratic Republic of Congo (DRC) began in the mid-1990s following regional instability after the 1994 genocide in Rwanda. Since then, repeated wars and ongoing armed violence—especially in eastern Congo—have deeply affected civilians. Millions of families have been displaced, and children have suffered the most, facing loss of education, healthcare, and basic safety.</p>
-    <p>Despite peace efforts, insecurity continues today, leaving many children vulnerable to poverty, hunger, and trauma. Saving Congo (DRC) Kids was created to bring hope where it is needed most—by supporting education, healthcare, and protection for children impacted by years of conflict. We believe every child deserves safety, dignity, and a chance for a better future.</p>
-  </section>
-
-  <section id="donate" class="section">
-    <h2>Make a Donation</h2>
-    <p>Your support helps provide essential resources like food, shelter, and education.</p>
-    <!-- Replace the single donate link with two buttons for payment options -->
-    <button id="payMastercard" class="btn pay-option">Pay with Mastercard</button>
-    <button id="payBank" class="btn pay-option">Pay with Bank</button>
-  </section>
-
-  <!-- Payment Modal (optional, can be hidden if not using modal) -->
-  <div id="paymentModal" class="payment-modal" style="display:none;">
-    <div class="payment-box">
-      <h3>Select Payment Method</h3>
-      <button id="payMastercardModal" class="pay-option">Pay with Mastercard</button>
-      <button id="payBankModal" class="pay-option">Pay with Bank</button>
-      <button class="close-btn" onclick="closePayment()">Cancel</button>
-    </div>
+<section id="home" class="hero">
+  <div>
+    <h1>Hope for Every Child In Eastern Congo (DRC)</h1>
+    <p>Join us in making a difference for children in CONGO (DRC).</p>
+    <a href="#donate" class="btn">Donate Now</a>
   </div>
+</section>
 
-  <section id="contact" class="section light">
-    <h2>Contact Us</h2>
-    <p>Email us at <a href="mailto:info@paccymugisha97@gmail.com">info@paccymugisha97@gmail.com</a></p>
-    <p>Call or WhatsApp us: <a href="tel:+16159491678">+1 (615) 949-1678</a></p>
-  </section>
+<section id="mission" class="section">
+  <h2>Our Mission</h2>
+  <p>We provide healthcare, education, and nourishment to children across Africa.</p>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Saving DRC CONGO Kids. All rights reserved.</p>
-  </footer>
+<section id="about" class="section light">
+  <h2>About Us</h2>
+  <p>Years of conflict in Eastern Congo have left millions of children vulnerable.</p>
+  <p>AMANI FOUNDATION brings hope through education, healthcare, and protection.</p>
+</section>
 
-  <!-- Include your updated JS -->
-  <script src="script.js"></script>
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <h2>Our Gallery</h2>
+  <p>Real moments from our work in Eastern Congo</p>
+
+  <div class="gallery-container">
+    <img src="images/gallery1.jpeg" onclick="openLightbox(this)">
+    <img src="images/gallery2.jpeg" onclick="openLightbox(this)">
+    <img src="images/gallery3.jpeg" onclick="openLightbox(this)">
+    <img src="images/gallery4.jpeg" onclick="openLightbox(this)">
+    <img src="images/gallery5.jpeg" onclick="openLightbox(this)">
+    <img src="images/gallery6.jpeg" onclick="openLightbox(this)">
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+
+<section id="donate" class="section">
+  <h2>Make a Donation</h2>
+  <p>Your support helps provide food, shelter, and education.</p>
+  <button class="btn">Pay with Mastercard</button>
+  <button class="btn">Pay with Bank</button>
+</section>
+
+<section id="contact" class="section light">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:info@paccymugisha97@gmail.com">info@paccymugisha97@gmail.com</a></p>
+  <p>Phone / WhatsApp: <a href="tel:+16159491678">+1 (615) 949-1678</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 AMANI FOUNDATION. All rights reserved.</p>
+</footer>
+
+<script>
+  function openLightbox(img) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = img.src;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
 </body>
 </html>
